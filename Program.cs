@@ -28,6 +28,11 @@ for (int i = 0; i < Questions.All.Count; i++)
     Console.WriteLine();
 }
 
+int total = Questions.All.Count;
+int percent = correct / total * 100;
+Print($"Итог: {correct} из {total} — {percent}%", ConsoleColor.Yellow);
+Print(percent >= 80 ? "Отлично, GitHub тебе по плечу!" : "Перечитай слайды лекции и попробуй ещё раз.", ConsoleColor.Cyan);
+
 // Спрашивает число от min до max, пока не введут правильно.
 static int AskNumber(int min, int max)
 {
